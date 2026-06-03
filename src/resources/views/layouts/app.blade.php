@@ -9,6 +9,13 @@
     @yield('css')
 </head>
 <body>
+    <header class="header">
+        <img
+            class="header__logo"
+            src="{{ asset('img/COACHTECHヘッダーロゴ.png') }}"
+            alt="COACHTECH"
+        >
+    </header>
     @yield('content')
 </body>
 </html>

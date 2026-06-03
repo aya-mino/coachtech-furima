@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,11 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/mypage/profile', function () {
-    return '
-        <form method="POST" action="/logout">
-            <input type="hidden" name="_token" value="'.csrf_token().'">
-            <button type="submit">ログアウト</button>
-        </form>
-    ';
-});
+Route::get('/mypage/profile', [ProfileController::class, 'edit']);

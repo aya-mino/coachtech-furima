@@ -15,6 +15,16 @@
             src="{{ asset('img/COACHTECHヘッダーロゴ.png') }}"
             alt="COACHTECH"
         >
+
+        @auth
+        <form action="/logout" method="POST">
+            @csrf
+            <button type="submit">
+                ログアウト
+            </button>
+        </form>
+        @endauth
+        
     </header>
     @yield('content')
 </body>
